@@ -1,0 +1,14 @@
+{
+  "name": "api-proxy",
+  "version": "1.0.0",
+  "description": "Simple API proxy for local development",
+  "main": "node_proxy.js",
+  "scripts": {
+    "start": "node node_proxy.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.6",
+    "cors": "^2.8.5"
+  }
+}

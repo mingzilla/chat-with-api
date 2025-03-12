@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming API Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <div class="input-field">
+                <label for="url">URL:</label>
+                <input type="text" id="url" placeholder="http://localhost:8080/pi/api/v2/apis/stream/40" value="/api/pi/api/v2/apis/stream/40">
+            </div>
+            <div class="input-field token-label">
+                <label for="token">Token:</label>
+                <input type="password" id="token" placeholder="XXXXXXXXXXXX">
+            </div>
+            <div class="input-field request-mode">
+                <label for="requestMode">Request Mode:</label>
+                <select id="requestMode">
+                    <option value="send">Single Response</option>
+                    <option value="stream">Stream Response</option>
+                </select>
+            </div>
+            <div class="prompt-container">
+                <div class="input-field prompt-field">
+                    <label for="prompt">Prompt:</label>
+                    <input type="text" id="prompt" placeholder="Enter your prompt here...">
+                </div>
+                <button id="sendBtn" class="send-button">Send</button>
+            </div>
+        </div>
+        
+        <div class="messages-section">
+            <div class="conversation-container">
+                <h3>Conversation</h3>
+                <div id="conversation" class="conversation"></div>
+            </div>
+        </div>
+        
+        <div class="clear-button-container">
+            <button id="clearBtn" class="clear-button">Clear Messages</button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/gh/mingzilla/api-client-js@latest/api-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
